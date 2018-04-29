@@ -1,0 +1,19 @@
+@isTest
+public class TaskUtilityTest
+{
+    @isTest static void testGetTaskPriority()
+    {
+        String priority=TaskUtility.getTaskPriority('AU');
+        System.assertEquals('Normal', priority);
+    }
+    @isTest static void testTaskHighPriority()
+    {
+        String priority=TaskUtility.getTaskPriority('US');
+        System.assertEquals('High', priority);
+    }
+    @isTest static void testTaskPriorityInvalid()
+    {
+         String priority=TaskUtility.getTaskPriority('idfdf');
+        System.assertEquals(null, priority);
+    }
+}
